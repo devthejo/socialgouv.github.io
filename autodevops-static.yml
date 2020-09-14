@@ -3,10 +3,6 @@ include:
     file: /autodevops.yml
     ref: v17.1.1
 
-variables:
-  AUTO_DEVOPS_RELEASE_AUTO: "🔖"
-  AUTO_DEVOPS_PRODUCTION_AUTO: "🚀"
-
 # NOTE(douglasduteil): No install :(
 # sharing the node_modules is too slow...
 Install:
@@ -18,6 +14,7 @@ Install:
 # Here we manually run `yarn next export` and reuse the `out` dir in Dockerfile
 .next_static_build:
   needs: []
+  stage: Registration
   cache:
     key:
       files:
