@@ -3,12 +3,6 @@ include:
     file: /autodevops.yml
     ref: v17.1.1
 
-# NOTE(douglasduteil): No install :(
-# sharing the node_modules is too slow...
-Install:
-  rules:
-    - when: never
-
 # NOTE(douglasduteil): use custom build job
 # The website it statically built with Nextjs
 # Here we manually run `yarn next export` and reuse the `out` dir in Dockerfile

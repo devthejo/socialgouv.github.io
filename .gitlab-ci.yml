@@ -11,6 +11,10 @@ variables:
   AUTO_DEVOPS_PRODUCTION_AUTO: "🚀"
 
 Install:
+  rules:
+    - when: never
+
+Build:
   extends: .next_static_build
 
 Lint:
