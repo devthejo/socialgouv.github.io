@@ -13,7 +13,6 @@ Install:
 # The website it statically built with Nextjs
 # Here we manually run `yarn next export` and reuse the `out` dir in Dockerfile
 .next_static_build:
-  needs: []
   stage: Registration
   cache:
     key:
@@ -33,3 +32,12 @@ Install:
     expire_in: 1 day
     paths:
       - out
+
+# NOTE(julienbouquillon): use custom register job
+# By default, kosko-charts use a "/app" for default docker images names
+# TODO: discuss
+# NOTE(julienbouquillon): this needs to be defined AFTER the Build... #todo
+.register_app:
+  extends: .autodevops_register_image
+  variables:
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/app
