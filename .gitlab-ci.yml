@@ -18,7 +18,7 @@ Test:
   rules:
     - when: never
 
-Build:
+Install:
   extends: .next_static_build
 
 Register image:
