@@ -10,6 +10,9 @@ variables:
   AUTO_DEVOPS_RELEASE_AUTO: "🔖"
   AUTO_DEVOPS_PRODUCTION_AUTO: "🚀"
 
+Install:
+  extends: .next_static_build
+
 Lint:
   rules:
     - when: never
@@ -17,9 +20,6 @@ Lint:
 Test:
   rules:
     - when: never
-
-Install:
-  extends: .next_static_build
 
 Register image:
   extends: .register_app
