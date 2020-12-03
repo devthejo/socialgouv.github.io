@@ -411,3 +411,10 @@
     - e-mjpm
   role: Développeur Fullstack
   picture: /static/images/members/remi.roycourt.jpg
+- id: jo.gottfreund
+  name: Jo Gottfreund
+  structure: beNext
+  startups:
+    - e-mjpm
+  role: Développeur Fullstack
+  picture: /static/images/members/jo.gottfreund.jpg
